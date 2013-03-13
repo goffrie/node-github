@@ -269,7 +269,7 @@ describe("[repos]", function() {
     });
 
     it("should successfully execute GET /repos/:user/:repo/branches/:branch (getBranch)",  function(next) {
-        client.repos.getBranches(
+        client.repos.getBranch(
             {
                 user: "String",
                 repo: "String",
@@ -354,7 +354,8 @@ describe("[repos]", function() {
                 sha: "String",
                 path: "String",
                 page: "Number",
-                per_page: "Number"
+                per_page: "Number",
+                since: "Date"
             },
             function(err, res) {
                 Assert.equal(err, null);
