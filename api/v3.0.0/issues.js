@@ -55,7 +55,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -105,7 +105,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -146,7 +146,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -191,7 +191,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -238,7 +238,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -281,7 +281,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -322,7 +322,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -364,7 +364,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -406,7 +406,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -447,7 +447,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -490,7 +490,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -532,7 +532,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -573,7 +573,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -613,7 +613,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -654,7 +654,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -696,7 +696,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -738,7 +738,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -779,7 +779,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -823,7 +823,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -864,7 +864,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -908,7 +908,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -953,7 +953,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
@@ -994,7 +994,7 @@ var issues = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-poll-interval", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });

@@ -1,11 +1,26 @@
 {
     "name" : "github",
+<<<<<<< HEAD
     "version" : "0.1.10",
+||||||| merged common ancestors
+    "version" : "0.1.8",
+=======
+    "version" : "0.1.9",
+>>>>>>> 1979ad4
     "description" : "NodeJS wrapper for the GitHub API",
     "author": "Mike de Boer <info@mikedeboer.nl>",
     "contributors": [
+<<<<<<< HEAD
         { "name": "Mike de Boer", "email": "info@mikedeboer.nl" },
         { "name": "Fabian Jakobs", "email": "fabian@c9.io" }
+||||||| merged common ancestors
+        { "name": "Mike de Boer", "email": "info@mikedeboer.nl>" },
+        { "name": "Fabian Jakobs", "email": "fabian@c9.io" }
+=======
+        { "name": "Mike de Boer", "email": "info@mikedeboer.nl>" },
+        { "name": "Fabian Jakobs", "email": "fabian@c9.io" },
+        { "name": "Jesse Piascik", "email": "jesse@piascik.net"}
+>>>>>>> 1979ad4
     ],
     "homepage": "http://github.com/mikedeboer/node-github",
     "repository" : {

@@ -616,12 +616,26 @@ var Client = module.exports = function(config) {
             port = this.config.proxy.port || 3128;
         }
 
+<<<<<<< HEAD
         headers = headers || {}
         headers = Util.extend({
+||||||| merged common ancestors
+        var headers = {
+=======
+        headers = headers || {};
+        headers = Util.extend({
+>>>>>>> 1979ad4
             "host": host,
             "user-agent": "NodeJS HTTP Client",
             "content-length": "0"
+<<<<<<< HEAD
         }, headers);
+||||||| merged common ancestors
+        };
+=======
+        }, headers);
+
+>>>>>>> 1979ad4
         if (hasBody) {
             if (format == "json")
                 query = JSON.stringify(query);

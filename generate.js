@@ -30,6 +30,7 @@ var main = module.exports = function(versions) {
         var dir = __dirname + "/api/" + version;
         var routes = JSON.parse(Fs.readFileSync(dir + "/routes.json", "utf8"));
         var defines = routes.defines;
+        console.log("version: " + version + " defines:" + JSON.stringify(defines, null, 3));
         delete routes.defines;
         var headers = defines["response-headers"];
         // cast header names to lowercase.
