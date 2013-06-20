@@ -30,7 +30,7 @@ var gists = module.exports = {
      *  - per_page (Number): Optional. A custom page size up to 100. Default is 30. Validation rule: ` ^[0-9]+$ `.
      *  - since (Date): Optional. Optional string of a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ 
      **/
-    this.getAll = function(msg, block, callback) {
+    this.getAll = function(msg, block, callback, headers) {
         var self = this;
         this.client.httpSend(msg, block, function(err, res) {
             if (err)
@@ -50,14 +50,14 @@ var gists = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
             
             if (callback)
                 callback(null, ret);
-        });
+        }, headers);
     };
 
     /** section: github
@@ -72,7 +72,7 @@ var gists = module.exports = {
      *  - per_page (Number): Optional. A custom page size up to 100. Default is 30. Validation rule: ` ^[0-9]+$ `.
      *  - since (Date): Optional. Optional string of a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ 
      **/
-    this.getFromUser = function(msg, block, callback) {
+    this.getFromUser = function(msg, block, callback, headers) {
         var self = this;
         this.client.httpSend(msg, block, function(err, res) {
             if (err)
@@ -92,14 +92,14 @@ var gists = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
             
             if (callback)
                 callback(null, ret);
-        });
+        }, headers);
     };
 
     /** section: github
@@ -113,7 +113,7 @@ var gists = module.exports = {
      *  - public (Boolean): Required. 
      *  - files (Json): Required. Files that make up this gist. The key of which should be a required string filename and the value another required hash with parameters: 'content' 
      **/
-    this.create = function(msg, block, callback) {
+    this.create = function(msg, block, callback, headers) {
         var self = this;
         this.client.httpSend(msg, block, function(err, res) {
             if (err)
@@ -133,14 +133,14 @@ var gists = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
             
             if (callback)
                 callback(null, ret);
-        });
+        }, headers);
     };
 
     /** section: github
@@ -154,7 +154,7 @@ var gists = module.exports = {
      *  - description (String): Optional. 
      *  - files (Json): Required. Files that make up this gist. The key of which should be a required string filename and the value another required hash with parameters: 'content' 
      **/
-    this.edit = function(msg, block, callback) {
+    this.edit = function(msg, block, callback, headers) {
         var self = this;
         this.client.httpSend(msg, block, function(err, res) {
             if (err)
@@ -174,14 +174,14 @@ var gists = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
             
             if (callback)
                 callback(null, ret);
-        });
+        }, headers);
     };
 
     /** section: github
@@ -193,7 +193,7 @@ var gists = module.exports = {
      * 
      *  - since (Date): Optional. Optional string of a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ 
      **/
-    this.public = function(msg, block, callback) {
+    this.public = function(msg, block, callback, headers) {
         var self = this;
         this.client.httpSend(msg, block, function(err, res) {
             if (err)
@@ -213,14 +213,14 @@ var gists = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
             
             if (callback)
                 callback(null, ret);
-        });
+        }, headers);
     };
 
     /** section: github
@@ -232,7 +232,7 @@ var gists = module.exports = {
      * 
      *  - since (Date): Optional. Optional string of a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ 
      **/
-    this.starred = function(msg, block, callback) {
+    this.starred = function(msg, block, callback, headers) {
         var self = this;
         this.client.httpSend(msg, block, function(err, res) {
             if (err)
@@ -252,14 +252,14 @@ var gists = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
             
             if (callback)
                 callback(null, ret);
-        });
+        }, headers);
     };
 
     /** section: github
@@ -271,7 +271,7 @@ var gists = module.exports = {
      * 
      *  - id (String): Required. 
      **/
-    this.get = function(msg, block, callback) {
+    this.get = function(msg, block, callback, headers) {
         var self = this;
         this.client.httpSend(msg, block, function(err, res) {
             if (err)
@@ -291,14 +291,14 @@ var gists = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
             
             if (callback)
                 callback(null, ret);
-        });
+        }, headers);
     };
 
     /** section: github
@@ -310,7 +310,7 @@ var gists = module.exports = {
      * 
      *  - id (String): Required. 
      **/
-    this.star = function(msg, block, callback) {
+    this.star = function(msg, block, callback, headers) {
         var self = this;
         this.client.httpSend(msg, block, function(err, res) {
             if (err)
@@ -330,14 +330,14 @@ var gists = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
             
             if (callback)
                 callback(null, ret);
-        });
+        }, headers);
     };
 
     /** section: github
@@ -349,7 +349,7 @@ var gists = module.exports = {
      * 
      *  - id (String): Required. 
      **/
-    this.deleteStar = function(msg, block, callback) {
+    this.deleteStar = function(msg, block, callback, headers) {
         var self = this;
         this.client.httpSend(msg, block, function(err, res) {
             if (err)
@@ -369,14 +369,14 @@ var gists = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
             
             if (callback)
                 callback(null, ret);
-        });
+        }, headers);
     };
 
     /** section: github
@@ -388,7 +388,7 @@ var gists = module.exports = {
      * 
      *  - id (String): Required. 
      **/
-    this.checkStar = function(msg, block, callback) {
+    this.checkStar = function(msg, block, callback, headers) {
         var self = this;
         this.client.httpSend(msg, block, function(err, res) {
             if (err)
@@ -408,14 +408,14 @@ var gists = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
             
             if (callback)
                 callback(null, ret);
-        });
+        }, headers);
     };
 
     /** section: github
@@ -427,7 +427,7 @@ var gists = module.exports = {
      * 
      *  - id (String): Required. 
      **/
-    this.fork = function(msg, block, callback) {
+    this.fork = function(msg, block, callback, headers) {
         var self = this;
         this.client.httpSend(msg, block, function(err, res) {
             if (err)
@@ -447,14 +447,14 @@ var gists = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
             
             if (callback)
                 callback(null, ret);
-        });
+        }, headers);
     };
 
     /** section: github
@@ -466,7 +466,7 @@ var gists = module.exports = {
      * 
      *  - id (String): Required. 
      **/
-    this.delete = function(msg, block, callback) {
+    this.delete = function(msg, block, callback, headers) {
         var self = this;
         this.client.httpSend(msg, block, function(err, res) {
             if (err)
@@ -486,14 +486,14 @@ var gists = module.exports = {
                 ret = {};
             if (!ret.meta)
                 ret.meta = {};
-            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location"].forEach(function(header) {
+            ["x-ratelimit-limit", "x-ratelimit-remaining", "x-oauth-scopes", "link", "location", "last-modified", "etag", "status"].forEach(function(header) {
                 if (res.headers[header])
                     ret.meta[header] = res.headers[header];
             });
             
             if (callback)
                 callback(null, ret);
-        });
+        }, headers);
     };
 
 }).call(gists.gists);

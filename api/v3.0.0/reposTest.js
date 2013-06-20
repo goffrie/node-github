@@ -269,7 +269,7 @@ describe("[repos]", function() {
     });
 
     it("should successfully execute GET /repos/:user/:repo/branches/:branch (getBranch)",  function(next) {
-        client.repos.getBranches(
+        client.repos.getBranch(
             {
                 user: "String",
                 repo: "String",
@@ -354,7 +354,8 @@ describe("[repos]", function() {
                 sha: "String",
                 path: "String",
                 page: "Number",
-                per_page: "Number"
+                per_page: "Number",
+                since: "Date"
             },
             function(err, res) {
                 Assert.equal(err, null);
@@ -530,6 +531,7 @@ describe("[repos]", function() {
             {
                 user: "String",
                 repo: "String",
+                ref: "String",
                 archive_format: "String"
             },
             function(err, res) {
@@ -758,8 +760,8 @@ describe("[repos]", function() {
         );
     });
 
-    it("should successfully execute PUT /user/starred/:user/:repo (watch)",  function(next) {
-        client.repos.watch(
+    it("should successfully execute PUT /user/starred/:user/:repo (star)",  function(next) {
+        client.repos.star(
             {
                 user: "String",
                 repo: "String"
@@ -772,8 +774,8 @@ describe("[repos]", function() {
         );
     });
 
-    it("should successfully execute DELETE /user/starred/:user/:repo (unWatch)",  function(next) {
-        client.repos.unWatch(
+    it("should successfully execute DELETE /user/starred/:user/:repo (unStar)",  function(next) {
+        client.repos.unStar(
             {
                 user: "String",
                 repo: "String"

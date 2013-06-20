@@ -20,28 +20,23 @@ describe("[search]", function() {
         client = new Client({
             version: "3.0.0"
         });
-        /*client.authenticate({
+        client.authenticate({
             type: "oauth",
             token: token
-        });*/
+        });
     });
 
     it("should successfully execute GET /legacy/issues/search/:user/:repo/:state/:keyword (issues)",  function(next) {
         client.search.issues(
             {
-                user: "mikedeboertest",
-                repo: "node_chat",
-                state: "open",
-                keyword: "macaroni"
+                user: "String",
+                repo: "String",
+                state: "String",
+                keyword: "String"
             },
             function(err, res) {
                 Assert.equal(err, null);
-                Assert.equal(res.issues.length, 1);
-                var issue = res.issues[0];
-                Assert.equal(issue.title, "My First Issue");
-                Assert.equal(issue.position, 1);
-                Assert.equal(issue.state, "open");
-
+                // other assertions go here
                 next();
             }
         );
@@ -50,14 +45,13 @@ describe("[search]", function() {
     it("should successfully execute GET /legacy/repos/search/:keyword (repos)",  function(next) {
         client.search.repos(
             {
-                keyword: "pasta",
-                language: "JavaScript"
+                keyword: "String",
+                language: "String",
+                start_page: "Number"
             },
             function(err, res) {
                 Assert.equal(err, null);
-                Assert.ok(res.repositories.length > 0);
-                Assert.equal(res.repositories[0].language, "JavaScript");
-
+                // other assertions go here
                 next();
             }
         );
@@ -66,21 +60,18 @@ describe("[search]", function() {
     it("should successfully execute GET /legacy/user/search/:keyword (users)",  function(next) {
         client.search.users(
             {
-                keyword: "mikedeboer"
+                keyword: "String",
+                start_page: "Number"
             },
             function(err, res) {
                 Assert.equal(err, null);
-                Assert.equal(res.users.length, 2);
-                var user = res.users[0];
-                Assert.equal(user.name, "Mike de Boer");
-                Assert.ok(user.username.indexOf("mikedeboer") === 0);
-
+                // other assertions go here
                 next();
             }
         );
     });
 
-    /*it("should successfully execute GET /legacy/user/email/:email (email)",  function(next) {
+    it("should successfully execute GET /legacy/user/email/:email (email)",  function(next) {
         client.search.email(
             {
                 email: "String"
@@ -91,5 +82,5 @@ describe("[search]", function() {
                 next();
             }
         );
-    });*/
+    });
 });
